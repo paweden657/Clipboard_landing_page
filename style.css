@@ -1,0 +1,116 @@
+:root {
+    --clr-primary-strong-cyan: hsl(171, 66%, 44%);
+    --clr-primary-light-blue: hsl(233, 100%, 69%);
+
+    --clr-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+    --clr-neutral-grayish-blue: hsl(201, 11%, 66%);
+
+    --cyan-hsl: 171, 66%;
+    --light-blue-hsl: 233, 100%;
+
+    --ff: 'Bai Jamjuree', sans-serif;
+
+    --fs: 18px;
+
+    --fw-600: 600;
+    --fw-400: 400;
+}
+body, html {
+    width: 100%;
+    margin: 0;
+}
+body {
+    font-size: var(--fs);
+    font-family: var(--ff);
+    font-weight: 400;
+    color: var(--clr-neutral-grayish-blue);
+    min-width: 375px;
+}
+header {
+    background-image: url(images/bg-header-desktop.png);
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        background-image: url(images/bg-header-mobile.png);
+    } 
+}
+#logo-container {
+    margin:30px 0;
+    display: flex;
+    justify-content: center;
+}
+#header-text-container {
+    display: flex;
+    justify-content: center;
+}
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+@media only screen and (max-width: 768px) {
+    header div {
+        width: 80%;
+    }
+}
+h1 {
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: var(--fw-600);
+    color: var(--clr-neutral-dark-grayish-blue);
+
+}
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+p {
+    margin-bottom: 0;
+}
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 768px) {
+    #buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+.button {
+    width: 15%;
+    min-width: 165px;
+    height: 45px;
+    border-radius: 25px;
+    margin: 0 20px;
+    font-size: var(--fs);
+    color: white;
+}
+@media only screen and (max-width: 768px) {
+    .button {
+        width: 80%;
+        height: 45px;
+        border-radius: 25px;
+        margin: 10px 0;
+    }
+}
+#ios-button {
+    background-color: var(--clr-primary-strong-cyan);
+    border: 2px solid var(--clr-primary-strong-cyan);
+    box-shadow: 0 1px 5px hsl(var(--cyan-hsl), 10%);
+}
+#mac-button {
+    background-color: var(--clr-primary-light-blue);
+    border: 2px solid var(--clr-primary-light-blue);
+    box-shadow: 0 1px 5px hsl(var(--light-blue-hsl), 10%);
+}
