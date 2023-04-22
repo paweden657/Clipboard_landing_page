@@ -7,6 +7,7 @@
 
     --cyan-hsl: 171, 66%;
     --light-blue-hsl: 233, 100%;
+    --grayish-blue-hsl: 201, 11%;
 
     --ff: 'Bai Jamjuree', sans-serif;
 
@@ -43,7 +44,7 @@ header {
         background-image: url(images/bg-header-mobile.png);
     } 
 }
-#logo-container {
+#logo-container-1 {
     margin:45px 0;
     display: flex;
     justify-content: center;
@@ -88,14 +89,14 @@ main {
         width: 77%;
     }
 }
-#buttons-container {
+.buttons-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 120px;
 }
 @media only screen and (max-width: 768px) {
-    #buttons-container {
+    .buttons-container {
         flex-direction: column;
         align-items: center;
     }
@@ -118,12 +119,12 @@ main {
         margin: 10px 0;
     }
 }
-#ios-button {
+#ios-button-1, #ios-button-2 {
     background-color: var(--clr-primary-strong-cyan);
     border: 2px solid var(--clr-primary-strong-cyan);
     box-shadow: 0 1px 5px hsl(var(--cyan-hsl), 10%);
 }
-#mac-button {
+#mac-button-1, #mac-button-2 {
     background-color: var(--clr-primary-light-blue);
     border: 2px solid var(--clr-primary-light-blue);
     box-shadow: 0 1px 5px hsl(var(--light-blue-hsl), 10%);
@@ -240,5 +241,77 @@ h3 {
     .column p {
         width: 100%;
         padding: 0;
+    }
+}
+#logos{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 20%);
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#logos img {
+    width: 60%;
+    padding: 0 10%;
+}
+@media only screen and (max-width: 768px) {
+    #logos{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    #logos img {
+        width: 25%;
+        max-width: 150px;
+        padding: 0 10%;
+        margin-bottom: 75px;
+    }
+}
+footer {
+    background-color: hsl(var(--grayish-blue-hsl), 96%);
+    color: var(--clr-neutral-dark-grayish-blue);
+    display: flex;
+    padding: 5% 10%;
+    justify-content:space-between;
+    align-items: center;
+}
+#logo-container-2 {
+    padding-right: 10%;
+}
+#links {
+    display: flex;
+    padding-right: 10%;
+}
+#links div {
+    margin: 0 30px;
+}
+#social-media {
+    display: flex;
+}
+#social-media svg {
+    margin: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+    #logo-container-2 {
+        padding-right: 0;
+    }
+    #links {
+        flex-direction: column;
+        padding-right: 0;
+        text-align: center;
+    }
+    .link {
+        margin-bottom: 0;
+    }
+    #social-media {
+        margin-top: 20px;
+    }
+    #social-media svg {
+        margin: 0 15px;
     }
 }
