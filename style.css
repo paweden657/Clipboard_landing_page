@@ -131,6 +131,9 @@ main {
     border: 2px solid var(--clr-primary-light-blue);
     box-shadow: 0 1px 5px hsl(var(--light-blue-hsl), 10%);
 }
+.button:hover {
+    cursor: pointer;
+}
 .button:active {
     opacity: 0.7;
 }
